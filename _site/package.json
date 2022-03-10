@@ -1,0 +1,19 @@
+{
+  "name": "cgaffney099.github.io",
+  "version": "1.0.0",
+  "description": "Chris's Professional Page",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgaffney099/cgaffney099.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cgaffney099/cgaffney099.github.io/issues"
+  },
+  "homepage": "https://github.com/cgaffney099/cgaffney099.github.io#readme"
+}

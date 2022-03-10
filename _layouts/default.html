@@ -1,0 +1,44 @@
+<head>
+    <script src="app.js"></script>
+    <meta charset="utf-8">
+</head>
+<div #app>
+    <h1>Chris Gaffney</h1>
+    <div>
+        <p>318 W King Street</p>
+        <p>Lancaster, PA 17603</p>
+        <p>717-798-6158</p>
+
+    </div>
+    <div class="Areas of Expertise">
+        <h2>Expertise</h2>
+        <ul>
+            <li>AWS</li>
+            <li>Google Cloud Platform</li>
+            <li>Serverless Functions</li>
+            <li>Project Management</li>
+            <li>Marketing</li>
+            <li>Version Control Systems</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Work Experience</h2>
+        {% assign sort_exp = site.data.experience | sort: "start" | reverse %}
+        {% for work in sort_exp %}
+        <div class="work-card">
+            {{work.experience}} <br>
+            {{work.start | date: "%B %Y"}} <br>
+            {{work.end}} <br>
+        </div>
+    </br>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+
+</script>
+
+<footer>
+
+</footer>
