@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/cgaffney099/cgaffney099.github.io/issues"
   },
-  "homepage": "https://github.com/cgaffney099/cgaffney099.github.io#readme"
+  "homepage": "https://github.com/cgaffney099/cgaffney099.github.io#readme",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.1.2",
+    "postcss": "^8.4.8",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^3.0.23"
+  }
 }

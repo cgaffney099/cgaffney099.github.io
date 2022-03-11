@@ -1,5 +1,6 @@
 <head>
     <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
     <meta charset="utf-8">
 </head>
 <div #app>
@@ -25,12 +26,30 @@
         <h2>Work Experience</h2>
         {% assign sort_exp = site.data.experience | sort: "start" | reverse %}
         {% for work in sort_exp %}
-        <div class="work-card">
-            {{work.experience}} <br>
-            {{work.start | date: "%B %Y"}} <br>
-            {{work.end}} <br>
-        </div>
-    </br>
+            {% if  work.job_type == "professional" %}
+                <div class="work-card">
+                    <span class="font-bold">{{work.experience}}</span> <br>
+                    {{work.organization}} <br>
+                    {{work.start | date: "%B %Y"}} - {{work.end | date: "%B %Y"}} 
+                </div>
+                </br>
+            {% endif %}
+
+        {% endfor %}
+    </div> 
+    <div>
+        <h2>Volunteer Experience</h2>
+        {% assign sort_exp = site.data.experience | sort: "start" | reverse %}
+        {% for work in sort_exp %}
+            {% if  work.job_type == "volunteer" %}
+                <div class="work-card">
+                    {{work.experience}} <br>
+                    {{work.organization}} <br>
+                    {{work.start | date: "%B %Y"}} - {{work.end | date: "%B %Y"}} <br>
+                </div>
+                </br>
+            {% endif %}
+
         {% endfor %}
     </div>
 </div>
